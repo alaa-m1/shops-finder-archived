@@ -1,24 +1,16 @@
-import { Box, Link as MUILink, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { ColoredDevider } from "@/shared";
 import  Link  from "next/link";
 const NotFound=()=>{
 return (
     <Box
-      sx={{
-        margin: "40px auto auto",
-        maxWidth: "600px",
-        boxShadow: "5px 5px 10px",
-        ":hover": { boxShadow: "10px 10px 20px" },
-        textAlign: "center",
-        paddingBottom: "10px",
-        color:"#000"
-      }}
+    className="mx-auto mt-[150px] max-w-[600px] shadow-md hover:shadow-lg text-center py-[10px] text-black"
       data-testid="NotFound-div"
     >
-        <Typography fontSize="16px" color="#00f">404</Typography>
-        <Typography color="#000">PAGE NOT FOUND</Typography>
+        <Typography className="text-[16px] text-blue-600">404</Typography>
+        <Typography className="text-black uppercase">Page Nnot Found</Typography>
         <ColoredDevider/>
-        <MUILink component={Link} href='/' sx={{textDecoration:'none', color:"#000"}}>Home Page</MUILink>
+        <Link href='/' className="no-underline text-blue-950">Home Page</Link>
     </Box>
 )
 }

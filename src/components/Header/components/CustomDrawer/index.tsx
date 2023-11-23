@@ -33,27 +33,27 @@ export const CustomDrawer = ({
           </IconButton>
 
           <Drawer
-            sx={{ width: "180px", zIndex:"1001" }}
+            className="w-[180px] z-[1001]"
             open={open}
             anchor="left"
             onClose={() => setOpen(false)}
             PaperProps={{ sx: { backgroundColor: "#1976d2" } }}
           >
             <Box sx={{ textAlign: "center" }}>
-              <Typography sx={{ marginTop: "5px", color: "#fff" }}>
-                <Image src={logoSrc} alt={"logo image"}/>
+              <Typography className="mt-[5px] text-[#fff] flex justify-center">
+                <Image src={logoSrc} alt={"logo image"} />
               </Typography>
             </Box>
             <StyledList
-              sx={{ width: "100%", maxWidth: 360 }}
+              className="w-full max-w-[360px]"
               aria-labelledby="nested-list-subheader"
             >
               {drawerLinks.map((link, index) => {
                 if (link.label !== "")
                   return (
                     <ListItemButton key={index} onClick={() => setOpen(false)}>
-                      <Link style={{ width: "100%" }} href={link.path}>
-                        <Typography sx={{ color: "#000" }}>
+                      <Link className="w-full" href={link.path}>
+                        <Typography className="text-black">
                           {link.label}
                         </Typography>
                       </Link>
@@ -69,16 +69,16 @@ export const CustomDrawer = ({
                     setOpen(false);
                   }}
                 >
-                  <Link style={{ width: "100%" }} href={"/auth"}>
-                    <Typography sx={{ color: "#000" }}>
+                  <Link className="w-full" href={"/auth"}>
+                    <Typography className="text-black">
                       {"Sign Out"}
                     </Typography>
                   </Link>
                 </ListItemButton>
               ) : (
                 <ListItemButton onClick={() => setOpen(false)}>
-                  <Link style={{ width: "100%" }} href={"/auth"}>
-                    <Typography sx={{ color: "#000" }}>
+                  <Link className="w-full" href={"/auth"}>
+                    <Typography className="text-black">
                       {"Sign In"}
                     </Typography>
                   </Link>

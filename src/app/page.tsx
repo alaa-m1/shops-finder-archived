@@ -1,5 +1,10 @@
+import { LoadingSpinner } from "@/shared";
+
 const Home = () => {
-  return <div>Hom page</div>;
+  return <div>Home page
+
+<LoadingSpinner floatingOver/>
+  </div>
 };
 
 export default Home;

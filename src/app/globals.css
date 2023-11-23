@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .shadow-with-border{
+    border: 1px soild #ccc;
+    box-shadow: 0px 2px 8px;
+  }
+}
+@layer components {
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
