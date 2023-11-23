@@ -4,17 +4,17 @@ import Link from "next/link";
 
 export const Footer = (): React.ReactNode => {
   return (
-    <Box className="footer-section" sx={{ backgroundColor: "#1976d2" }}>
+    <Box className="flex justify-around items-center h-[50px] shadow-with-border bg-[#1976d2]">
       <Box>
         <Link href={"/"}>
-          <Typography color="#000">Shops Finder</Typography>
+          <Typography className="text-black">Shops Finder</Typography>
         </Link>
       </Box>
-      <Box sx={{ display: "flex" }}>
-        <EmailIcon sx={{"& path":{color:"#000"}}}/>
+      <Box className="flex">
+        <EmailIcon className="[&>path]:text-slate-800"/>
 
         <a href="mailto:alaa85a@gmail.com">
-          <Typography color="#000">alaa85a@gmail.com</Typography>
+          <Typography className="text-black">alaa85a@gmail.com</Typography>
         </a>
       </Box>
     </Box>

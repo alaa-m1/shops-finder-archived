@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import '../app/globals.css'
-import "@/assets/style/App.scss";
 import { linksDetails } from '@/shared'
 import { Box } from '@mui/material';
 import { Footer, Header } from '@/components';
@@ -19,17 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Box
-          sx={{
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-            justifyContent: "space-between",
-          }}
+        className="relative flex flex-col min-h-[100vh] justify-between"
         >
           <Header links={linksDetails} />
-          <Box sx={{ flexGrow: 1 }}>
-            <main>
+          <Box className="grow-[1]">
+            <main className="py-[10px] px-[5px]">
               {children}
             </main>
           </Box>

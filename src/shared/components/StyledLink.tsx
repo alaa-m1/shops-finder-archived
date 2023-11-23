@@ -13,11 +13,7 @@ const LinkComponent = ({ children, ...props }: LinkComponentProps) => {
     <Link {...props}>
       <Typography
         component="span"
-        color="#fff"
-        sx={{
-          fontSize: 16,
-          fontWeight: props.isactive === "active" ? "bold" : "normal",
-        }}
+        className={`text-white text-[16px] ${props.isactive === "active" ? "font-bold" : "font-normal"}`}
       >
         {children}
       </Typography>
