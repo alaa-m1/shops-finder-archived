@@ -3,6 +3,7 @@ import '../app/globals.css'
 import { linksDetails } from '@/shared'
 import { Box } from '@mui/material';
 import { Footer, Header } from '@/components';
+import Head from 'next/head';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,13 +17,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="preload" href="/fonts/Enriqueta-Bold.ttf" as="font" crossOrigin="anonymous"></link>
+        <link rel="preload" href="/fonts/Enriqueta-Medium.ttf" as="font" crossOrigin="anonymous"></link>
+        <link rel="preload" href="/fonts/Enriqueta-Regular.ttf" as="font" crossOrigin="anonymous"></link>
+        <link rel="preload" href="/fonts/Enriqueta-SemiBold.ttf" as="font" crossOrigin="anonymous"></link>
+      </Head>
       <body>
         <Box
-        className="relative flex flex-col min-h-[100vh] justify-between"
+          className="relative flex flex-col min-h-[100vh] justify-between"
         >
           <Header links={linksDetails} />
           <Box className="grow-[1]">
-            <main className="py-[10px] px-[5px]">
+            <main className={`py-[10px] px-[5px] `}>
               {children}
             </main>
           </Box>
