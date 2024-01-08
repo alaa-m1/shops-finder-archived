@@ -8,7 +8,7 @@ return (
       data-testid="NotFound-div"
     >
         <Typography className="text-[16px] text-blue-600">404</Typography>
-        <Typography className="text-black uppercase">Page Nnot Found</Typography>
+        <Typography className="text-black uppercase">Page not Found</Typography>
         <ColoredDevider/>
         <Link href='/' className="no-underline text-blue-950">Home Page</Link>
     </Box>

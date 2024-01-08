@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Footer = (): React.ReactNode => {
   return (
-    <Box className="flex justify-around items-center h-[50px] shadow-with-border bg-[#1976d2]">
+    <Box className="flex grow-0 justify-around items-center h-[50px] shadow-with-border bg-[#1976d2]">
       <Box>
         <Link href={"/"}>
           <Typography className="text-black">Shops Finder</Typography>

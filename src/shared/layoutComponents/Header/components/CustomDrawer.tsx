@@ -5,8 +5,8 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import logoSrc from "@/assets/images/phoenix.png";
 import { LinkInfo } from "@/types";
 import Link from "next/link";
-import { StyledList } from "./components";
 import Image from "next/image";
+import { StyledList } from "@/shared";
 
 type CustomDrawerProps = {
   links: Array<LinkInfo>;
