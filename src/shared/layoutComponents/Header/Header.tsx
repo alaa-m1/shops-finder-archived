@@ -28,18 +28,12 @@ export const Header = ({ links }: NavigationProps) => {
   return (
 
     <Box
-      className="shadow-with-border flex-grow-0 text-black"
+      className="grow-0 shadow-with-border text-black"
     >
       <AppBar
-        // className="navigator-container"
         className="flex justify-between p-[5px]  
           bg-gradient-to-b from-indigo-900 via-indigo-500 to-indigo-600
           place-items-center [&_.MuiToolbar-root]:w-full relative pr-0 z-[1000]"
-      // sx={{
-      //   position: "relative",
-      //   paddingRight: "0px !important",
-      //    zIndex: "1000",
-      // }}
       >
         <Toolbar>
           {isSmallScreen ? (
@@ -70,7 +64,19 @@ export const Header = ({ links }: NavigationProps) => {
                       {link.label}
                     </StyledLink>
                   ))}
+                  </Box>
                 </Box>
+              <Box
+                className="flex grow-0 place-items-center justify-between [&>div>a>span]:mx-[10px] [&>div>a>span]:transition-colors ease-in delay-200 hover:[&>div>a>span]:text-[#e76712]"
+              >
+                    <StyledLink
+                      href={'auth/signin'}
+                      isactive={
+                        pathname === 'auth/signin' ? "active" : "inActive"
+                      }
+                    >
+                      Sign In
+                    </StyledLink>
               </Box>
             </>
           )}

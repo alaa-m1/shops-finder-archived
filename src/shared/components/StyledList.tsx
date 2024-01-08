@@ -1,3 +1,4 @@
+"use client"
 import { List } from "@mui/material";
 import styled from "styled-components";
 

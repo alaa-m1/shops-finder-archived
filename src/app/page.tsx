@@ -1,10 +1,12 @@
-import { LoadingSpinner } from "@/shared";
+import Home from "./home/Home";
+import { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: 'Shops Finder',
+}
 
-const Home = () => {
-  return <div>Home page
-
-<LoadingSpinner floatingOver/>
-  </div>
+const Page = () => {
+  return <Home/>
 };
 
-export default Home;
+export default Page;

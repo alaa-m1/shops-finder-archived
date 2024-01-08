@@ -1,12 +1,13 @@
 "use client"
 import { Typography } from "@mui/material";
 import Link, { LinkProps } from "next/link";
+import { CSSProperties } from "react";
 import styled from "styled-components";
 
-type LinkComponentProps = LinkProps &
-  React.RefAttributes<HTMLAnchorElement> & {
+type LinkComponentProps = LinkProps & {
     isactive: "active" | "inActive";
     children: React.ReactNode;
+    style?: CSSProperties | undefined;
   };
 const LinkComponent = ({ children, ...props }: LinkComponentProps) => {
   return (
