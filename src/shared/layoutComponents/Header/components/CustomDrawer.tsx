@@ -1,9 +1,10 @@
+import React from "react";
 import Drawer from "@mui/material/Drawer";
 import { IconButton, Box, Typography, ListItemButton } from "@mui/material";
 import { useState } from "react";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import logoSrc from "@/assets/images/phoenix.png";
-import { LinkInfo } from "@/types";
+import { LinkInfo, User } from "@/types";
 import Link from "next/link";
 import Image from "next/image";
 import { StyledList } from "@/shared";
@@ -11,7 +12,7 @@ import { StyledList } from "@/shared";
 type CustomDrawerProps = {
   links: Array<LinkInfo>;
   isSmallScreen: boolean;
-  currentUser: any;
+  currentUser: User;
 };
 
 export const CustomDrawer = ({
@@ -62,7 +63,7 @@ export const CustomDrawer = ({
                 return <div key={index}>&nbsp;</div>;
               })}
 
-              {currentUser ? (
+              {currentUser.id ? (
                 <ListItemButton
                   onClick={() => {
                     console.log('SignOut')

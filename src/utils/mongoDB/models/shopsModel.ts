@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const shopsSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true
+  },
   name: {
     type: String,
     required: true
@@ -14,8 +18,8 @@ const shopsSchema = new mongoose.Schema({
     required: true
   },
   averagePrice: {
-    required: true,
-    type: Number
+    type: Number,
+    required: true
   }
 });
 

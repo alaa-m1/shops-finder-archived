@@ -1,3 +1,4 @@
+import React from "react";
 import Home from "./home/Home";
 import { Metadata } from 'next'
  

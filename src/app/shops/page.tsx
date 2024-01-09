@@ -1,3 +1,4 @@
+import React from "react";
 import { dbConnect } from '@/utils/mongoDB/mongo';
 import ShopsList from './components/ShopsList';
 import { Shops } from '@/utils/mongoDB/models/shopsModel';
@@ -12,7 +13,7 @@ export default async function Page() {
     <main>
       <div>
         <h1>Shops</h1> 
-        <ShopsList allShops={allShops} />  
+        <ShopsList shopsList={allShops} />  
       </div>
     </main>
   )
