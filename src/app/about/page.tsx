@@ -1,3 +1,4 @@
+import React from "react";
 import { ExternalLink } from '@/shared';
 import { Box, Typography } from '@mui/material';
 

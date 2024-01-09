@@ -1,4 +1,5 @@
 "use client"
+import React from "react";
 import {
   Box,
   AppBar,
@@ -8,7 +9,6 @@ import {
 } from "@mui/material";
 import logoSrc from "@/assets/images/phoenix.png";
 import { CustomDrawer } from "./components";
-import { useState } from "react";
 import { LinkInfo } from "@/types";
 import { StyledLink } from "@/shared";
 import { usePathname } from 'next/navigation';
@@ -23,7 +23,6 @@ export const Header = ({ links }: NavigationProps) => {
   const pathname = usePathname();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-  const [open, setOpen] = useState(true);
   const currentUser = null;
   return (
 

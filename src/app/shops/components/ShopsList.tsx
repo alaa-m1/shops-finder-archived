@@ -1,22 +1,17 @@
-import Image from 'next/image'
+import React from "react";
 import Link from 'next/link'
+import { Shops } from "@/types";
 
-export default function ShopsList(shopsList: any) {
-  const allShops = shopsList.allShops;
+export default function ShopsList({shopsList}: {shopsList: Shops}) {
+  const allShops = shopsList;
   return(
     <div>
       {
-        allShops.map((shop: any) =>
-        <Link key={shop['_id']} href={`/shops/${shop['_id']}`}>
+        allShops.map((shop) =>
+        <Link key={shop.id} href={`/shops/${shop.id}`}>
           <div>
-            <Image
-              src={shop.cover}
-              width={200}
-              height={200}
-              alt={shop.name}
-            />
             <h2>{shop.name}</h2>
-            <p>{shop.rating}</p>
+            <p>{shop.address}</p>
           </div> 
         </Link> 
       )}

@@ -7,3 +7,19 @@ export type LinkInfo = {
 export type SideBarLinkInfo = LinkInfo & {
   component?: string;
 };
+
+export type Shop={
+  id: number;
+  name: string;
+  type: string;
+  address: string;
+  averagePrice: number;
+}
+export type Shops=Array<Shop>
+
+export type User={
+  id: number;
+  name: string;
+  email: string;
+  mobile: string;
+}
